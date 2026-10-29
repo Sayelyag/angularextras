@@ -1,36 +1,156 @@
-
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="
+  background-color: #005187 !important;
+  padding: 12px 25px;
+  box-shadow: 0 4px 14px rgba(0, 81, 135, 0.2);
+  border-bottom: 3px solid #84b6f4;
+">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="/assets/SWlogo.jpg" style="width: 50px;" alt=""></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+
+        <a class="navbar-brand" href="#" style="
+          border-radius: 8px;
+          transition: transform 0.2s ease;
+        "
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'">
+            <img src="/assets/SWlogo.jpg" style="width: 50px;" alt="">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation" style="
+            border: 1px solid #84b6f4;
+            background-color: #4d82be;
+          ">
+            <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/']">home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/subirfoto']">subir</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/']" style="
+                      color: #feffff;
+                      font-weight: 600;
+                      padding: 10px 16px;
+                      border-radius: 7px;
+                      transition: color 0.2s ease, background-color 0.2s ease;
+                    "
+                    onmouseover="this.style.color='#005187'; this.style.backgroundColor='#c4dafa'"
+                    onmouseout="this.style.color='#feffff'; this.style.backgroundColor='transparent'">
+                        home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/subirfoto']" style="
+                      color: #feffff;
+                      font-weight: 600;
+                      padding: 10px 16px;
+                      border-radius: 7px;
+                      transition: color 0.2s ease, background-color 0.2s ease;
+                    "
+                    onmouseover="this.style.color='#005187'; this.style.backgroundColor='#c4dafa'"
+                    onmouseout="this.style.color='#feffff'; this.style.backgroundColor='transparent'">
+                        subir
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false" style="
+                        color: #feffff;
+                        font-weight: 600;
+                        padding: 10px 16px;
+                        border-radius: 7px;
+                        transition: color 0.2s ease, background-color 0.2s ease;
+                      "
+                      onmouseover="this.style.color='#005187'; this.style.backgroundColor='#c4dafa'"
+                      onmouseout="this.style.color='#feffff'; this.style.backgroundColor='transparent'">
+                        Dropdown
+                    </a>
+
+                    <ul class="dropdown-menu" style="
+                      background-color: #feffff;
+                      border: 1px solid #84b6f4;
+                      border-radius: 10px;
+                      box-shadow: 0 5px 15px rgba(0, 81, 135, 0.15);
+                      padding: 8px;
+                    ">
+                        <li>
+                            <a class="dropdown-item" href="#" style="
+                              color: #005187;
+                              border-radius: 6px;
+                              padding: 9px 12px;
+                              transition: background-color 0.2s ease;
+                            "
+                            onmouseover="this.style.backgroundColor='#c4dafa'"
+                            onmouseout="this.style.backgroundColor='transparent'">
+                                Action
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#" style="
+                              color: #005187;
+                              border-radius: 6px;
+                              padding: 9px 12px;
+                              transition: background-color 0.2s ease;
+                            "
+                            onmouseover="this.style.backgroundColor='#c4dafa'"
+                            onmouseout="this.style.backgroundColor='transparent'">
+                                Another action
+                            </a>
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider" style="border-color: #84b6f4;">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="#" style="
+                              color: #005187;
+                              border-radius: 6px;
+                              padding: 9px 12px;
+                              transition: background-color 0.2s ease;
+                            "
+                            onmouseover="this.style.backgroundColor='#c4dafa'"
+                            onmouseout="this.style.backgroundColor='transparent'">
+                                Something else here
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true" style="
+                      color: #84b6f4;
+                      font-weight: 500;
+                      padding: 10px 16px;
+                      opacity: 0.65;
+                    ">
+                        Disabled
+                    </a>
+                </li>
+
             </ul>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
-        <form class="d-flex" role="search">
-            <button class="btn btn-outline-danger" type="button" >hi</button>
-        </form>
+
+            <form class="d-flex" role="search">
+                <button class="btn btn-outline-danger" type="button" style="
+                  background-color: #4d82be;
+                  color: #feffff;
+                  border: 1px solid #84b6f4;
+                  border-radius: 7px;
+                  padding: 8px 18px;
+                  font-weight: 600;
+                  transition: background-color 0.2s ease, color 0.2s ease;
+                "
+                onmouseover="this.style.backgroundColor='#c4dafa'; this.style.color='#005187'"
+                onmouseout="this.style.backgroundColor='#4d82be'; this.style.color='#feffff'">
+                    Boton
+                </button>
+            </form>
+
         </div>
     </div>
 </nav>
