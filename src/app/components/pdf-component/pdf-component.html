@@ -1,0 +1,69 @@
+<!-- Contenedor principal -->
+<div class="container py-5">
+
+    <!-- Tarjeta -->
+    <div
+        class="card border-0 rounded-4 mx-auto"
+        style="
+            max-width: 650px;
+            background-color: #feffff;
+            border: 1px solid #c4dafa !important;
+            box-shadow: 0 8px 25px rgba(0, 81, 135, 0.15);
+            overflow: hidden;
+        "
+    >
+
+        <!-- Cabecera -->
+        <div
+            class="card-header text-white py-3 border-0"
+            style="background-color: #005187;"
+        >
+
+            <h4 class="mb-0 fw-bold">
+
+                <!-- Icono PDF -->
+                <i class="bi bi-file-earmark-pdf me-2"></i>
+
+                Generador de documentos PDF
+
+            </h4>
+        </div>
+
+        <!-- Cuerpo de la tarjeta -->
+        <div
+            class="card-body p-5 text-center"
+            style="background-color: #feffff;"
+        >
+
+            <p class="mb-4" style="color: #4d82be; font-size: 1.05rem;">
+                Genera tu documento PDF fácilmente pulsando el siguiente botón.
+            </p>
+
+            <!-- Botón que ejecuta generarDocumento() -->
+            <button
+                class="btn btn-lg px-5 shadow-sm fw-bold"
+                style="
+                    background-color: #005187;
+                    color: #feffff;
+                    border: none;
+                    border-radius: 50px;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+                    transition: all 0.2s ease;
+                "
+                onmouseover="this.style.backgroundColor='#4d82be'; this.style.transform='scale(1.04)'"
+                onmouseout="this.style.backgroundColor='#005187'; this.style.transform='scale(1)'"
+                (click)="generarDocumento()"
+            >
+
+                <i class="bi bi-file-pdf me-2"></i>
+
+                CREAR PDF
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

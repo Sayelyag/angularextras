@@ -1,0 +1,66 @@
+<!-- Contenedor que ocupa toda la altura de la pantalla -->
+<div class="container min-vh-100 d-flex justify-content-center align-items-center" style="
+    background-color: #feffff;
+">
+
+    <!-- Tarjeta central -->
+    <div
+        class="card border-0 shadow-sm rounded-4 text-center p-5"
+        style="
+            max-width: 500px;
+            background-color: #feffff;
+            border: 1px solid #c4dafa !important;
+            box-shadow: 0 8px 25px rgba(0, 81, 135, 0.15) !important;
+            border-radius: 20px !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        "
+        onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(0, 81, 135, 0.25)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0, 81, 135, 0.15)'"
+    >
+
+        <!-- Título -->
+        <h1 class="fw-bold text-primary mb-3" style="
+            color: #005187 !important;
+            font-size: 2.5rem;
+        ">
+            ¡Holii!
+        </h1>
+
+        <!-- Bienvenida -->
+        <p class="fs-5 text-secondary mb-2" style="
+            color: #4d82be !important;
+            font-weight: 600;
+        ">
+            ¡Bienvenido!
+        </p>
+
+        <!-- Descripción -->
+        <p class="text-muted mb-4" style="
+            color: #4d82be !important;
+            opacity: 0.85;
+            line-height: 1.6;
+        ">
+            Sube tus imágenes de forma fácil y rápida.
+        </p>
+
+        <!-- Botón que navega a la ruta subirfoto -->
+        <a
+            class="btn btn-primary btn-lg rounded-pill px-4"
+            [routerLink]="['/subirfoto']"
+            style="
+                background-color: #005187;
+                border: 2px solid #005187;
+                color: #feffff;
+                border-radius: 50px !important;
+                padding: 12px 35px;
+                font-weight: 600;
+                box-shadow: 0 4px 12px rgba(0, 81, 135, 0.2);
+                transition: all 0.25s ease;
+            "
+            onmouseover="this.style.backgroundColor='#4d82be'; this.style.borderColor='#4d82be'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0, 81, 135, 0.3)'"
+            onmouseout="this.style.backgroundColor='#005187'; this.style.borderColor='#005187'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0, 81, 135, 0.2)'"
+        >
+            Comenzar
+        </a>
+    </div>
+</div>

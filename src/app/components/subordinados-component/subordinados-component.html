@@ -1,0 +1,92 @@
+<!-- Comprobamos que existe un token -->
+@if (token) {
+
+    <!-- Comprobamos que tenemos subordinados -->
+    @if (subordinados) {
+
+        <!-- Contenedor de la tabla -->
+        <div
+            class="d-flex flex-column gap-4 mx-auto w-75 pt-5"
+            style="max-width: 1000px;"
+        >
+
+            <!-- Tabla de Bootstrap -->
+            <table
+                class="table table-bordered table-hover text-center align-middle rounded-3 overflow-hidden"
+                style="
+                    border-color: #84b6f4;
+                    box-shadow: 0 8px 25px rgba(0, 81, 135, 0.12);
+                    background-color: #feffff;
+                "
+            >
+
+                <!-- Cabecera -->
+                <thead style="
+                    background-color: #005187;
+                    color: #feffff;
+                    border-color: #005187;
+                ">
+
+                    <tr class="text-center">
+
+                        <th class="py-3 ps-2">Nombre</th>
+
+                        <th class="py-3 ps-2">Oficio</th>
+
+                        <th class="py-3 ps-3">Salario</th>
+
+                        <th class="py-3 ps-3">Director</th>
+
+                    </tr>
+
+                </thead>
+
+                <!-- Cuerpo de la tabla -->
+                <tbody>
+
+                    <!-- Recorremos el array de subordinados -->
+                    @for (emp of subordinados; track emp) {
+
+                        <tr
+                            style="
+                                border-color: #c4dafa;
+                                color: #005187;
+                                transition: background-color 0.2s ease;
+                            "
+                            onmouseover="this.style.backgroundColor='#c4dafa'"
+                            onmouseout="this.style.backgroundColor='#feffff'"
+                        >
+
+                            <!-- Apellido -->
+                            <td class="py-3 ps-2 fw-semibold" style="border-color: #84b6f4;">
+                                {{ emp.apellido }}
+                            </td>
+
+                            <!-- Oficio -->
+                            <td class="py-3 ps-2" style="border-color: #84b6f4;">
+                                {{ emp.oficio }}
+                            </td>
+
+                            <!-- Salario -->
+                            <td class="py-3 ps-2 fw-semibold" style="border-color: #84b6f4;">
+                                {{ emp.salario }}€
+                            </td>
+
+                            <!-- Director -->
+                            <td class="py-3 ps-2" style="border-color: #84b6f4;">
+                                {{ emp.director }}
+                            </td>
+
+                        </tr>
+
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    }
+
+}

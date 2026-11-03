@@ -1,0 +1,67 @@
+<!-- Contenedor principal -->
+<div class="container mt-5 text-center">
+
+    <!-- Formulario -->
+    <form #form="ngForm">
+
+        <!-- Título -->
+        <h2 class="mb-4" style="color: #005187;">
+            Subir imagen
+        </h2>
+
+        <!-- Label que funciona como botón para seleccionar imagen -->
+        <label
+          for="imagen"
+          class="btn btn-primary"
+          style="
+            background-color: #4d82be;
+            margin-right: 8px;
+            color: #feffff;
+            border: 1px solid #4d82be;
+            border-radius: 4px;
+            padding: 8px 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        ">
+          Examinar imagen
+        </label>
+
+        <!-- Input para seleccionar archivos -->
+        <!-- #imagenInput conecta con el ViewChild -->
+        <!-- accept="image/*" permite seleccionar imágenes -->
+        <input
+            #imagenInput
+            type="file"
+            id="imagen"
+            accept="image/*"
+            class="d-none"
+        >
+
+        <br>
+        <br>
+
+        <!-- Botón que ejecuta subir() -->
+        <button
+            type="button"
+            class="btn btn-success"
+            (click)="subir()"
+            style="
+              background-color: #005187;
+              margin-right: 8px;
+              color: #feffff;
+              border: 1px solid #005187;
+              border-radius: 4px;
+              padding: 8px 16px;
+              font-size: 1rem;
+              font-weight: 600;
+              cursor: pointer;
+              transition: background-color 0.2s ease, color 0.2s ease;
+            ">
+            Guardar imagen seleccionada
+        </button>
+
+    </form>
+
+</div>

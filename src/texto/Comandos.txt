@@ -1,0 +1,10 @@
+crear carpeta
+ng new primerangular --standalone=false --routing=false
+
+crear components
+ng g c components/signalComponent
+
+Librerias
+npm install bootstrap bootstrap-icons
+npm install jspdf jspdf-autotable
+npm install ngx-toastr

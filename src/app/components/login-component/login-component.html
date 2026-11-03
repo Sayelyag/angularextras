@@ -1,0 +1,90 @@
+<!-- Contenedor principal -->
+<div class="container mt-4 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+
+    <!-- Formulario de login -->
+    <div
+        class="mx-auto w-50 d-flex flex-column p-4 rounded-4"
+        style="
+            max-width: 450px;
+            min-width: 300px;
+            background-color: #feffff;
+            border: 2px solid #84b6f4;
+            box-shadow: 0 8px 25px rgba(0, 81, 135, 0.15);
+        "
+    >
+
+        <!-- Título -->
+        <h1
+            class="text-center mb-4 fw-bold"
+            style="color: #005187; font-size: 2.2rem;"
+        >
+            LOGIN
+        </h1>
+
+        <!-- Formulario -->
+        <form #formLogin="ngForm" class="d-flex flex-column gap-2">
+
+            <!-- Etiqueta del nombre -->
+            <label class="form-label fw-semibold" style="color: #005187;">
+                Nombre:
+            </label>
+
+            <!-- Input del nombre -->
+            <!-- #cajanombre es la referencia que utiliza ViewChild -->
+            <input
+                name="cajanombre"
+                #cajanombre
+                type="text"
+                class="form-control"
+                style="
+                    border: 1px solid #84b6f4;
+                    border-radius: 10px;
+                    padding: 10px 12px;
+                    color: #005187;
+                    background-color: #feffff;
+                "
+            >
+
+            <!-- Etiqueta de contraseña -->
+            <label class="form-label fw-semibold mt-2" style="color: #005187;">
+                Contraseña:
+            </label>
+
+            <!-- Input de contraseña -->
+            <input
+                name="cajacontrasenia"
+                #cajacontrasenia
+                type="password"
+                class="form-control"
+                style="
+                    border: 1px solid #84b6f4;
+                    border-radius: 10px;
+                    padding: 10px 12px;
+                    color: #005187;
+                    background-color: #feffff;
+                "
+            >
+
+            <!-- Botón que ejecuta la función login() -->
+            <button
+                type="button"
+                (click)="login()"
+                class="btn text-white mt-3 fw-semibold"
+                style="
+                    background-color: #005187;
+                    border: none;
+                    border-radius: 50px;
+                    padding: 11px;
+                    box-shadow: 0 4px 10px rgba(0, 81, 135, 0.2);
+                    transition: all 0.2s ease;
+                "
+                onmouseover="this.style.backgroundColor='#4d82be'; this.style.transform='scale(1.02)'"
+                onmouseout="this.style.backgroundColor='#005187'; this.style.transform='scale(1)'"
+            >
+                Login
+            </button>
+
+        </form>
+
+    </div>
+</div>
